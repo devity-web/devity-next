@@ -8,20 +8,9 @@ import {deDeTranslations} from './locales/de-de';
 import {frFrTranslations} from './locales/fr-fr';
 import {jaJpTranslations} from './locales/ja-jp';
 
-const getLang = () => {
-  const lang = localStorage.getItem('lang');
-
-  if (lang) {
-    return lang;
-  }
-
-  return 'en';
-};
-
 i18next.use(initReactI18next).init({
   debug: true,
   fallbackLng: 'en',
-  lng: getLang(),
   resources: {
     pt: ptPtTranslations,
     en: enGbTranslations,
