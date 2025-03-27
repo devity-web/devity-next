@@ -2,7 +2,6 @@ import {Check} from 'lucide-react';
 import {motion} from 'framer-motion';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
-import {z} from 'zod';
 import {useState} from 'react';
 import {useTranslation} from 'react-i18next';
 import {Card, CardContent, CardFooter} from './ui/card';
@@ -24,20 +23,15 @@ import {
   SelectValue,
 } from './ui/select';
 import {Button} from './ui/button';
-
-const contactSchema = z.object({
-  name: z.string().min(4, 'contact.errors.name'),
-  company: z.string().min(4, 'contact.errors.company'),
-  email: z.string().email('contact.errors.email'),
-  phone: z.string().min(1, 'contact.errors.phone'),
-  source: z.string().min(1, 'contact.errors.source'),
-});
+import {type ContactValues, contactSchema} from '@/schemas/contact.schema';
+import {sendContact} from '@/actions/send-contact';
+import {toast} from 'sonner';
 
 export default function Contact() {
   const {t} = useTranslation();
   const [loading, setLoading] = useState(false);
 
-  const form = useForm<z.infer<typeof contactSchema>>({
+  const form = useForm<ContactValues>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
       name: '',
@@ -48,8 +42,22 @@ export default function Contact() {
     },
   });
 
-  const onSubmit = async (values: z.infer<typeof contactSchema>) => {
+  const onSubmit = async (values: ContactValues) => {
     setLoading(true);
+    sendContact(values)
+      .then(() => {
+        toast.success(
+          'Thank you for contacting us! We will get back to you soon.',
+        );
+      })
+      .catch(error => {
+        toast.error('Something went wrong. Please try again later.');
+        console.error(error);
+      })
+      .finally(() => {
+        setLoading(false);
+        // form.reset();
+      });
   };
 
   return (
