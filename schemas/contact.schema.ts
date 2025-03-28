@@ -5,7 +5,7 @@ export const contactSchema = z.object({
   company: z.string().min(4, 'contact.errors.company'),
   email: z.string().email('contact.errors.email'),
   phone: z.string().min(1, 'contact.errors.phone'),
-  source: z.string().min(1, 'contact.errors.source'),
+  source: z.string().optional(),
 });
 
 export type ContactValues = z.infer<typeof contactSchema>;

@@ -1,5 +1,5 @@
-import {IconBrandInstagram, IconBrandLinkedin} from '@tabler/icons-react';
 import {CodeXml} from 'lucide-react';
+import {FaInstagram, FaLinkedin} from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -29,12 +29,12 @@ export default function Footer() {
                     href="https://instagram.com/devity.pt"
                     rel="noreferrer"
                   >
-                    <IconBrandInstagram className="size-6" />
+                    <FaInstagram className="size-6" />
                   </a>
                 </li>
                 <li className="font-medium hover:text-primary">
                   <a href="/">
-                    <IconBrandLinkedin className="size-6" />
+                    <FaLinkedin className="size-6" />
                   </a>
                 </li>
               </ul>

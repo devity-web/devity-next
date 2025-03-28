@@ -56,7 +56,7 @@ export default function Contact() {
       })
       .finally(() => {
         setLoading(false);
-        // form.reset();
+        form.reset();
       });
   };
 

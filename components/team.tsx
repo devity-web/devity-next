@@ -1,10 +1,6 @@
 import {Button} from '@/components/ui/button';
 import {useTranslation} from 'react-i18next';
-import {
-  IconBrandGithub,
-  IconBrandInstagram,
-  IconBrandLinkedin,
-} from '@tabler/icons-react';
+import {FaGithub, FaInstagram, FaLinkedin} from 'react-icons/fa';
 
 export default function Team() {
   const {t} = useTranslation();
@@ -57,7 +53,7 @@ export default function Team() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <IconBrandInstagram className="size-4" />
+                  <FaInstagram className="size-4" />
                 </a>
               </Button>
               <Button asChild size="icon" variant="ghost">
@@ -66,7 +62,7 @@ export default function Team() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <IconBrandGithub className="size-4" />
+                  <FaGithub className="size-4" />
                 </a>
               </Button>
               <Button asChild size="icon" variant="ghost">
@@ -75,7 +71,7 @@ export default function Team() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <IconBrandLinkedin className="size-4" />
+                  <FaLinkedin className="size-4" />
                 </a>
               </Button>
             </div>

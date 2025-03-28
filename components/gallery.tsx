@@ -37,11 +37,11 @@ export default function Gallery() {
       image: '/bowsy.png',
     },
     {
-      id: 'timetracking',
-      title: 'Timetracking',
+      id: 'devjourney',
+      title: 'Devjourney',
       description: t('portfolio.itemTwo'),
       href: 'https://timetracking-de6e4.web.app/',
-      image: '/timetracking.png',
+      image: '/devjourney.png',
     },
     {
       id: 'feitec',
