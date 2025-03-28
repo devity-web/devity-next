@@ -50,6 +50,14 @@ export default function Gallery() {
       href: '/',
       image: '/feitec.png',
     },
+    {
+      id: 'trim-tame',
+      title: 'Trim & Tame',
+      description:
+        'Trim and Tame is a hair salon located in the heart of the city of Toronto. They offer a variety of services including haircuts, hair coloring, and hair styling.',
+      href: 'https://barber-next-seven.vercel.app/',
+      image: '/trim-tame.png',
+    },
   ];
 
   useEffect(() => {
