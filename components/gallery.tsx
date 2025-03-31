@@ -44,19 +44,28 @@ export default function Gallery() {
       image: '/devjourney.png',
     },
     {
-      id: 'feitec',
-      title: 'Feitec',
-      description: t('portfolio.itemThree'),
-      href: '/',
-      image: '/feitec.png',
-    },
-    {
       id: 'trim-tame',
       title: 'Trim & Tame',
       description:
         'Trim and Tame is a hair salon located in the heart of the city of Toronto. They offer a variety of services including haircuts, hair coloring, and hair styling.',
       href: 'https://barber-next-seven.vercel.app/',
       image: '/trim-tame.png',
+    },
+    {
+      id: 'porto',
+      title: 'Porto Restaurant',
+      description:
+        'Porto is a restaurant located in the heart of the city of Porto. They offer a variety of services including dine-in, takeout, and delivery.',
+      href: 'https://porto-restaurant.vercel.app/',
+      image: '/porto.png',
+    },
+    {
+      id: 'apex',
+      title: 'Apex Gym',
+      description:
+        'Where Strength Meets Community! At [Your Gym Name], we believe fitness is more than just a workout – it is a lifestyle',
+      href: 'https://apex-eosin.vercel.app/',
+      image: '/apex.png',
     },
   ];
 
